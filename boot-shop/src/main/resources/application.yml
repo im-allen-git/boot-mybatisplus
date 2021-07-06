@@ -1,0 +1,30 @@
+spring:
+  port: 10088
+  application:
+    name: mall-portal
+  profiles:
+    active: dev #默认为开发环境
+  servlet:
+    multipart:
+      max-file-size: 5MB # 单个文件的最大值
+      max-request-size: 50MB # 上传文件总的最大值
+
+
+ali1688api:
+  API_HOST: http://api-gw.onebound.cn/
+  API_KEY: tel13564700983
+  API_SECRET: 20191107
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    auto-mapping-behavior: full
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath*:mapper/**/*Mapper.xml
+  global-config:
+    # 逻辑删除配置
+    db-config:
+      # 删除前
+      logic-not-delete-value: 1
+      # 删除后
+      logic-delete-value: 0

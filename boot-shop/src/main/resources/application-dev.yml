@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    dynamic:
+      primary: db-27
+      datasource:
+        db-31-source:
+          url: jdbc:mysql://192.168.1.31:3306/source_data?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+          username: kairong
+          password: kaironG@123
+          driver-class-name: com.mysql.cj.jdbc.Driver
+        db-31-useful:
+          url: jdbc:mysql://192.168.1.31:3306/useful_data?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+          username: kairong
+          password: kaironG@123
+          driver-class-name: com.mysql.cj.jdbc.Driver
+        db-27:
+          url: jdbc:mysql://192.168.1.27:3306/crossshop?serverTimezone=Asia/Shanghai&characterEncoding=utf8
+          username: cerong
+          password: root123
+          driver-class-name: com.mysql.cj.jdbc.Driver
+        db-28-ali:
+          url: jdbc:mysql://192.168.1.28:3306/alidata?serverTimezone=Asia/Shanghai&characterEncoding=utf8
+          username: import
+          password: import123
+          driver-class-name: com.mysql.cj.jdbc.Driver
+        db-28-cross:
+          url: jdbc:mysql://192.168.1.28:3306/cross_border?serverTimezone=Asia/Shanghai&characterEncoding=utf8
+          username: import
+          password: import123
+          driver-class-name: com.mysql.cj.jdbc.Driver
